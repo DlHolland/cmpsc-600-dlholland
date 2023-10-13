@@ -1,0 +1,28 @@
+2023-08-07 12:47:09:tryceratops.files.discovery:12006:56 ERROR Failed to parse file /home/dylan/codonDevs/bandit/bandit/codon-script.py, skipping it
+Traceback (most recent call last):
+  File "/home/dylan/codonDevs/tryceratops/src/tryceratops/files/discovery.py", line 54, in _parse_python_files_from_dir
+    parsed, filefilter = parse_file(filename)
+  File "/home/dylan/codonDevs/tryceratops/src/tryceratops/files/parser.py", line 42, in parse_file
+    tree = parse_tree(content)
+  File "/home/dylan/codonDevs/tryceratops/src/tryceratops/files/parser.py", line 37, in parse_tree
+    return ast.parse(content.read())
+  File "/usr/lib/python3.10/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+  File "<unknown>", line 4
+    from python import bandit.cli.main
+                             ^
+SyntaxError: invalid syntax
+2023-08-07 12:48:05:tryceratops.files.discovery:12078:56 ERROR Failed to parse file /home/dylan/codonDevs/bandit/bandit/codon-script.py, skipping it
+Traceback (most recent call last):
+  File "/home/dylan/codonDevs/tryceratops/src/tryceratops/files/discovery.py", line 54, in _parse_python_files_from_dir
+    parsed, filefilter = parse_file(filename)
+  File "/home/dylan/codonDevs/tryceratops/src/tryceratops/files/parser.py", line 42, in parse_file
+    tree = parse_tree(content)
+  File "/home/dylan/codonDevs/tryceratops/src/tryceratops/files/parser.py", line 37, in parse_tree
+    return ast.parse(content.read())
+  File "/usr/lib/python3.10/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+  File "<unknown>", line 4
+    from python import bandit.cli.main
+                             ^
+SyntaxError: invalid syntax

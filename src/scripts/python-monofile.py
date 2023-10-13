@@ -1,16 +1,15 @@
-#! /home/dylan/.codon/bin/codon run
 
-from python import sys, time
-from python import subprocess
-from python import os
-from python import bandit.cli.main as bandit
-from python import flake8.main.cli as flake8
-from python import autoflake
-from python import eradicate
-from python import isort.main as isort
-from python import pydocstyle.__main__ as pydocstyle
-from python import tryceratops.__main__ as tryceratops
-from python import ruff.__main__ as ruff
+import sys, time
+import subprocess
+import os
+import bandit.cli.main as bandit
+import flake8.main.cli as flake8
+import autoflake
+import eradicate
+import isort.main as isort
+import pydocstyle.__main__ as pydocstyle
+import tryceratops.__main__ as tryceratops
+import ruff.__main__ as ruff
 
 def reset_args():
     values = len(sys.argv) -1
