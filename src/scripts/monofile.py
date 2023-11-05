@@ -3,7 +3,6 @@
 from python import sys, time
 from python import subprocess
 from python import os
-from python import bandit.cli.main as bandit
 from python import flake8.main.cli as flake8
 from python import autoflake
 from python import eradicate
@@ -11,6 +10,7 @@ from python import isort.main as isort
 from python import pydocstyle.__main__ as pydocstyle
 from python import tryceratops.__main__ as tryceratops
 from python import ruff.__main__ as ruff
+from python import entry_point_locator as locator
 
 def reset_args():
     values = len(sys.argv) -1
@@ -21,20 +21,22 @@ def reset_args():
     
 
 def run():
+
+    bandit_path = locator.locate()
+    print(bandit_path)
+
     try:
         # Bandit
-        sys.argv.append("-r")
-        sys.argv.append("../Documents/bandit")
-        sys.argv.append("--exit-zero")
+        sys.argv.append("/home/dylan/codonDevs/bandit/bandit")
         print(sys.argv)
-        bandit.main()
+        bandit_path.main()
     except PyError as e:
         if str(e) == "0":
             pass
     
     reset_args()
     
-
+"""
     try:
         # flake8
         print("FLAKEY")
@@ -83,7 +85,6 @@ def run():
             pass
     reset_args()
 
-    """
     try:
         # Pydocstyle
         print("PYDOCSTYLE")
@@ -94,7 +95,6 @@ def run():
         if str(e) == "0":
             pass
     reset_args()
-    """
     try:
         # Tryceratops
         print("TRYCERATOPS")
@@ -106,7 +106,6 @@ def run():
             pass
     reset_args()
 
-    """
     try:
         # Ruff
         print("RUFF")
