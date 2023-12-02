@@ -1,7 +1,7 @@
 import importlib
 import pkg_resources
 
-
+@python
 def locate(module: str):
     # Create generator to store all CLI scripts
     pkgs = pkg_resources.iter_entry_points(group='console_scripts')
